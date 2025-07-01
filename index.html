@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -10,95 +10,77 @@
 </head>
 
 <body>
-    <h1>Consultar CEP</h1>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Consultar CEP</h1>
 
-    <form class="row g-3">
-        <div class="col-md-2">
-            <label class="form-label" for="cep">CEP:</label>
-            <input class="form-control" type="number" name="cep" id="cep" onblur="consultarcep()">
-        </div>
+        <form class="row g-3">
+            
+            <div class="col-md-2">
+                <label class="form-label" for="cep">CEP:</label>
+                <input class="form-control" type="number" name="cep" id="cep" placeholder="Digite o CEP" onblur="consultarcep()">
+            </div>
 
-        <div class="col-md-6">
-            <label class="form-label" for="logradouro">Logradouro:</label>
-            <input class="form-control" type="text" name="logradouro" id="logradouro">
-        </div>
+            
+            <div class="col-md-6">
+                <label class="form-label" for="logradouro">Logradouro:</label>
+                <input class="form-control" type="text" name="logradouro" id="logradouro" placeholder="Rua, avenida, etc.">
+            </div>
 
-        <div class="col-md-2">
-            <label class="form-label" for="numero">Número:</label>
-            <input class="form-control" type="number" name="numero" id="numero">
-        </div>
+            
+            <div class="col-md-2">
+                <label class="form-label" for="numero">Número:</label>
+                <input class="form-control" type="number" name="numero" id="numero" placeholder="Nº">
+            </div>
 
-        <div class="col-md-10">
-            <label class="form-label" for="complemento">Complemento:</label>
-            <input class="form-control" type="text" name="complemento" id="complemento">
-        </div>
+            
+            <div class="col-md-10">
+                <label class="form-label" for="complemento">Complemento:</label>
+                <input class="form-control" type="text" name="complemento" id="complemento" placeholder="Apartamento, bloco, etc.">
+            </div>
 
-        <div class="col-md-5">
-            <label class="form-label" for="bairro">Bairro:</label>
-            <input class="form-control" type="text" name="bairro" id="bairro">
-        </div>
+            
+            <div class="col-md-5">
+                <label class="form-label" for="bairro">Bairro:</label>
+                <input class="form-control" type="text" name="bairro" id="bairro">
+            </div>
 
-        <div class="col-md-2">
-            <label class="form-label" for="cep">ddd:</label>
-            <input class="form-control" type="number" name="ddd" id="ddd" >
-        </div>
+            
+            <div class="col-md-2">
+                <label class="form-label" for="ddd">DDD:</label>
+                <input class="form-control" type="number" name="ddd" id="ddd" placeholder="Ex: 11">
+            </div>
 
-        <!-- UF -->
-        <div class="col-md-2">
-            <label class="form-label" for="uf">UF:</label>
-            <select class="form-select" aria-label="Default select example" id="uf">
-                <option value="AC">Acre (AC)</option>
-                <option value="AL">Alagoas (AL)</option>
-                <option value="AP">Amapá (AP)</option>
-                <option value="AM">Amazonas (AM)</option>
-                <option value="BA">Bahia (BA)</option>
-                <option value="CE">Ceará (CE)</option>
-                <option value="DF">Distrito Federal (DF)</option>
-                <option value="ES">Espírito Santo (ES)</option>
-                <option value="GO">Goiás (GO)</option>
-                <option value="MA">Maranhão (MA)</option>
-                <option value="MT">Mato Grosso (MT)</option>
-                <option value="MS">Mato Grosso do Sul (MS)</option>
-                <option value="MG">Minas Gerais (MG)</option>
-                <option value="PA">Pará (PA)</option>
-                <option value="PB">Paraíba (PB)</option>
-                <option value="PR">Paraná (PR)</option>
-                <option value="PE">Pernambuco (PE)</option>
-                <option value="PI">Piauí (PI)</option>
-                <option value="RJ">Rio de Janeiro (RJ)</option>
-                <option value="RN">Rio Grande do Norte (RN)</option>
-                <option value="RS">Rio Grande do Sul (RS)</option>
-                <option value="RO">Rondônia (RO)</option>
-                <option value="RR">Roraima (RR)</option>
-                <option value="SC">Santa Catarina (SC)</option>
-                <option value="SP">São Paulo (SP)</option>
-                <option value="SE">Sergipe (SE)</option>
-                <option value="TO">Tocantins (TO)</option>
-            </select>
-        </div>
+            
+            <div class="col-md-2">
+                <label class="form-label" for="uf">UF:</label>
+                <select class="form-select" aria-label="default select example"id="uf">
+                    
+                    
+                </select>
+            </div>
 
-        <!-- Localidade -->
-        <div class="col-md-3">
-            <label class="form-label" for="localidade">Localidade:</label>
-            <select class="form-select" aria-label="Default select example" id="localidade">
-                <option selected>Selecione...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
+            <!-- anapropeba
+            analista programador e fi duma egua -->
 
-<div class="col-md-12">
-    <button type="button" class="btn btn-outline-primary">Enviar</button>
-    <button type="button" class="btn btn-outline-primary">Limpar</button>
-</div>
-   
+            <div class="col-md-3">
+                <label class="form-label" for="localidade">Localidade:</label>
+                <select class="form-select" id="localidade">
+                    <option selected disabled>Selecione...</option>
+                    <option value="1">Exemplo 1</option>
+                    <option value="2">Exemplo 2</option>
+                    <option value="3">Exemplo 3</option>
+                </select>
+            </div>
 
-    </form>
+            
+            <div class="col-md-12 text-center mt-4">
+                <button type="button" class="btn btn-primary me-2">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>
+        </form>
+    </div>
 
-
-  
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
