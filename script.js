@@ -14,9 +14,7 @@ const consultarcep = () => {
         .then(json => {
             console.log(json)
             document.getElementById('logradouro').value = json.address
-
-            document.getElementById('bairro').value = json.district
-            document.getElementById('uf').value = json.state
+            document.getElementById('bairro').value = json.district            
             document.getElementById('localidade').value = json.city
             document.getElementById('ddd').value = json.ddd
             document.getElementById('uf').value = json.state
@@ -34,13 +32,35 @@ const fetchestados = () => {
             let options = '<option selected disabled>Selecione...</option>'
 
             data.forEach(estado => {
-                options = options + `<option value="${estado.sigla}">${estado.nome}</option>`
+                options = options + `<option value="${estado.sigla}">${estado.sigla}</option>`
             });
 
             document.getElementById('uf').innerHTML = options
 
         })
-
 }
 
 fetchestados()
+
+
+const fetchmunicipios = () => {
+
+    
+    fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/municipios`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+
+            let options = ' <option selected disabled>Selecione...</option>'
+
+            data.forEach(city => {
+                options = options + `<option value="${city.nome}">${city.nome}</option>`
+            });
+
+            document.getElementById('localidade').innerHTML = options
+
+        })
+
+}
+
+fetchmunicipios ()
